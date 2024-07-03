@@ -1,7 +1,7 @@
 class Solution {
     public int numberOfMatches(int n) {
         int count=0;
-        int temp=n;
+       
         while(n!=1){
         
         if(n%2==0){
