@@ -1,9 +1,13 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        int missing=0;
+        int totalsum=0;
+        int numsum=0;
         for(int i=0;i<nums.length;i++){
-            missing=(missing^i^nums[i]);
+            numsum+=nums[i];
         }
-        return missing^nums.length;
+        for(int i=0;i<=nums.length;i++){
+            totalsum+=i;
+        }
+        return totalsum-numsum;
     }
 }
