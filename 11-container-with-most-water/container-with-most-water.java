@@ -4,25 +4,21 @@ class Solution {
         int right=height.length-1;
         int max=Integer.MIN_VALUE;
         int width=height.length-1;
-        
+        int ans;
         while(left<right){
             if(height[left]<height[right]){
-                int ans=height[left]*width;
+                 ans=height[left]*width;
                 width--;
                 left++;
-                if(max<=ans){
-                    max=ans;
-                   
-                }
             }
             else{
-                int ans = height[right]*width;
+                 ans = height[right]*width;
                 width--;
                 right--;
-                if(max<=ans){
+            }
+             if(max<ans){
                     max=ans;
                 }
-            }
         }
         return max;
     }
